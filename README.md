@@ -1,7 +1,7 @@
-Real-Time Data Fetching and Streaming from Statistics Canada
+# Real-Time Data Fetching and Streaming from Statistics Canada
 This project focuses on fetching real-time data from Statistics Canada and streaming it to various destinations for further analysis and usage. The data is fetched using Kafka server and Zookeeper, then streamed to a website for real-time display. Additionally, the data is stored in an Amazon S3 bucket in JSON format for further processing, including crawling and query analysis.
 
-Overview
+# Overview
 The project involves the following components and steps:
 
 Data Fetching: Real-time data is fetched from Statistics Canada using Kafka server and Zookeeper. The data could include various statistics such as economic indicators, demographic data, or social trends.
