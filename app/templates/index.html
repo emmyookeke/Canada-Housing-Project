@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canada Housing Market Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Canada Housing Market Dashboard</h1>
+            <p>Explore Trends, Prices, and Neighborhoods</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <h2>Market Trends</h2>
+            <div class="grid">
+                {% for data in market_data %}
+                <div class="card">
+                    <h3>{{ data['year'] }}</h3>
+                    <p>Total Dwelling: {{ data['total_dwelling'] }}</p>
+                    <p>Single Detached: {{ data['single_detached'] }}</p>
+                    <p>Multiple: {{ data['multiple'] }}</p>
+                    <!-- Add more fields as needed -->
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Canada Housing Market Dashboard</p>
+        </div>
+    </footer>
+
+    <script>
+        // Add auto-refresh logic here (optional)
+        setInterval(() => {
+            window.location.reload();
+        }, 30000);  // Refresh every 30 seconds
+    </script>
+</body>
+</html>
